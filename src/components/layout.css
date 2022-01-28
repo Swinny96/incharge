@@ -367,7 +367,7 @@ footer {
   align-items: baseline;
   transition: 0.3s;
   border-width: 6px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 19px;
 }
 .Sidebar-Text2 {
@@ -375,7 +375,7 @@ footer {
   text-transform: none;
   white-space: pre-wrap;
   overflow: hidden;
-  font-size: 11px;
+  font-size: 14px;
 }
 .Sidebar-Link2:hover {
   background: transparent;
@@ -449,7 +449,7 @@ footer {
   text-transform: none;
   white-space: pre-wrap;
   overflow: hidden;
-  font-size: 11px;
+  font-size: 14px;
 }
 .Sublink:hover {
   background: transparent;
