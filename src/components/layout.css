@@ -357,7 +357,7 @@ footer {
 }
 
 .Sidebar-Link2 {
-  color: #414D45;
+  color: #414d45;
   padding: 12px 24px;
   font-weight: normal;
   text-decoration: none;
@@ -404,6 +404,62 @@ footer {
   .Sidebar-Links2 {
     border-top: 0px solid rgba(0, 0, 0, 0.25);
   }
+  .Sublink {
+    grid-template-columns: 0px auto!important;
+    gap: 0px !important;
+  }
+}
+
+.Sublink-Ul {
+  margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+}
+
+.Sublink-Li {
+  display: block;
+  width: auto;
+  position: relative;
+  white-space: nowrap;
+}
+
+.Sublink-Links {
+  text-align: left;
+}
+
+.Sublink {
+  color: #414d45;
+  padding: 12px 24px;
+  font-weight: normal;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 18px auto;
+  gap: 10px;
+  align-items: baseline;
+  transition: 0.3s;
+  border-width: 6px;
+  font-size: 13px;
+  line-height: 19px;
+}
+.Sublink.active-link2 {
+  color: var(--link) !important;
+}
+.Sublink-Text {
+  display: block;
+  text-transform: none;
+  white-space: pre-wrap;
+  overflow: hidden;
+  font-size: 11px;
+}
+.Sublink:hover {
+  background: transparent;
+  color: var(--link);
+  border-color: transparent var(--link) transparent transparent;
+}
+
+.Sublink:active {
+  color: var(--link);
+  text-decoration: underline;
 }
 
 .Login-Screen {

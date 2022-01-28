@@ -16,6 +16,7 @@ import "./font.css"
 import Footer from "./footer"
 import Sidebar2 from "./sidebar2"
 import NavLink2 from "./navlink2"
+import SubNavLink from "./sublink"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -95,18 +96,16 @@ const Layout = ({ children }) => {
               linkname="Reports"
               link="/"
             />
-            <ul className="Siderbar-Ul2">
-              <NavLink2
+            <ul className="Sublink-Ul">
+              <SubNavLink
                 state="active2"
                 linkstate="active-link2"
-                icon=""
                 linkname="Unbilled"
                 link="/"
               />
-              <NavLink2
+              <SubNavLink
                 state=""
                 linkstate=""
-                icon=""
                 linkname="Billed"
                 link="/"
               />
