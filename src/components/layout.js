@@ -5,61 +5,159 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
- import * as React from "react"
- import PropTypes from "prop-types"
- import { useStaticQuery, graphql } from "gatsby"
- 
- import Header from "./header"
- import "./layout.css"
- import "./icon.css"
- import "./font.css"
- import Sidebar from "./sidebar"
- import Link from "./link"
- import Footer from "./footer"
- 
- const Layout = ({ children }) => {
-   const data = useStaticQuery(graphql`
-     query SiteTitleQuery {
-       site {
-         siteMetadata {
-           title
-         }
-       }
-     }
-   `)
- 
-   return (
-     <div className="layout">
-       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-       <Sidebar
-         link1={
-           <Link
-             state="active"
-             linkstate="active-link"
-             icon="key"
-             linkname="Log In"
-             link="/"
-           />
-         }
-         link2={
-           <Link
-             state=""
-             linkstate=""
-             icon="user"
-             linkname="Register"
-             link="404"
-           />
-         }
-       />
-       <main>{children}</main>
-       <Footer />
-     </div>
-   )
- }
- 
- Layout.propTypes = {
-   children: PropTypes.node.isRequired,
- }
- 
- export default Layout
- 
+import * as React from "react"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
+
+import Header from "./header"
+import "./layout.css"
+import "./icon.css"
+import "./font.css"
+import Footer from "./footer"
+import Sidebar2 from "./sidebar2"
+import NavLink2 from "./navlink2"
+
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
+  return (
+    <div className="layout">
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Sidebar2
+        link1={
+          <NavLink2
+            state=""
+            linkstate=""
+            icon="home"
+            linkname="Welcome"
+            link="/"
+          />
+        }
+        link2={
+          <NavLink2
+            state=""
+            linkstate=""
+            icon="dashboard"
+            linkname="Overview"
+            link="404"
+          />
+        }
+        link3={
+          <NavLink2
+            state=""
+            linkstate=""
+            icon="user"
+            linkname="Handsets"
+            link="404"
+          />
+        }
+        link4={
+          <NavLink2
+            state=""
+            linkstate=""
+            icon="currency-notes-coins"
+            linkname="Charges"
+            link="404"
+          />
+        }
+        link5={
+          <NavLink2
+            state=""
+            linkstate=""
+            icon="usage-calls-cost-volume"
+            linkname="Calls"
+            link="404"
+          />
+        }
+        link6={
+          <NavLink2
+            state=""
+            linkstate=""
+            icon="user"
+            linkname="Destinations"
+            link="404"
+          />
+        }
+        link7={
+          <div>
+            <NavLink2
+              state="active2"
+              linkstate="active-link2"
+              icon="file"
+              linkname="Reports"
+              link="/"
+            />
+            <ul className="Siderbar-Ul2">
+              <NavLink2
+                state="active2"
+                linkstate="active-link2"
+                icon=""
+                linkname="Unbilled"
+                link="/"
+              />
+              <NavLink2
+                state=""
+                linkstate=""
+                icon=""
+                linkname="Billed"
+                link="/"
+              />
+            </ul>
+          </div>
+        }
+        link8={
+          <NavLink2
+            state=""
+            linkstate=""
+            icon="tag"
+            linkname="Tagging"
+            link="404"
+          />
+        }
+        link9={
+          <NavLink2
+            state=""
+            linkstate=""
+            icon="user-admin"
+            linkname="Admin"
+            link="404"
+          />
+        }
+        link10={
+          <NavLink2
+            state=""
+            linkstate=""
+            icon="download"
+            linkname="Downloads"
+            link="404"
+          />
+        }
+        link11={
+          <NavLink2
+            state=""
+            linkstate=""
+            icon="time"
+            linkname="Real Time"
+            link="404"
+          />
+        }
+      />
+      <main>{children}</main>
+      <Footer />
+    </div>
+  )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+export default Layout

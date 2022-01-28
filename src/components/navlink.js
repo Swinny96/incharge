@@ -1,6 +1,6 @@
 import React from "react"
 
-const Link = props => (
+const NavLink = props => (
   /*eslint-disable*/
   <li className={"Sidebar-Li" + " " + props.state}>
     <a href="/" className={"Sidebar-Link" + " " + props.linkstate}>
@@ -17,4 +17,4 @@ const Link = props => (
   </li>
 )
 
-export default Link
+export default NavLink
