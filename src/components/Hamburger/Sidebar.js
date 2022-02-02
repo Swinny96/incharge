@@ -9,7 +9,7 @@ const Nav = styled.nav`
   grid-area: sidebar;
 `
 
-const Navbar = () => {
+const Sidebar = () => {
   return (
     <Nav>
       <Burger />
@@ -17,4 +17,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Sidebar

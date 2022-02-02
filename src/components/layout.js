@@ -13,8 +13,8 @@ import Header from "./header"
 import "./layout.css"
 import "./icon.css"
 import "./font.css"
-import Navbar from "./Hamburger/Nav"
 import Footer from "./footer"
+import Sidebar from "./Hamburger/Sidebar"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
   return (
     <div className="layout">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Navbar />
+      <Sidebar />
       <main>{children}</main>
       <Footer />
     </div>
