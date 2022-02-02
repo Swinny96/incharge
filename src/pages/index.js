@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="InCharge - Login" />
+    <Seo title="Login" />
   </Layout>
 )
 

@@ -14,9 +14,10 @@ import "./layout.css"
 import "./icon.css"
 import "./font.css"
 import Footer from "./footer"
-import Sidebar2 from "./sidebar2"
-import NavLink2 from "./navlink2"
+import Sidebar from "./sidebar"
+import NavLink from "./navlink"
 import SubNavLink from "./sublink"
+import Navbar from "./Hamburger/Nav"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -32,123 +33,7 @@ const Layout = ({ children }) => {
   return (
     <div className="layout">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Sidebar2
-        link1={
-          <NavLink2
-            state=""
-            linkstate=""
-            icon="home"
-            linkname="Welcome"
-            link="/"
-          />
-        }
-        link2={
-          <NavLink2
-            state=""
-            linkstate=""
-            icon="dashboard"
-            linkname="Overview"
-            link="404"
-          />
-        }
-        link3={
-          <NavLink2
-            state=""
-            linkstate=""
-            icon="user"
-            linkname="Handsets"
-            link="404"
-          />
-        }
-        link4={
-          <NavLink2
-            state=""
-            linkstate=""
-            icon="currency-notes-coins"
-            linkname="Charges"
-            link="404"
-          />
-        }
-        link5={
-          <NavLink2
-            state=""
-            linkstate=""
-            icon="usage-calls-cost-volume"
-            linkname="Calls"
-            link="404"
-          />
-        }
-        link6={
-          <NavLink2
-            state=""
-            linkstate=""
-            icon="user"
-            linkname="Destinations"
-            link="404"
-          />
-        }
-        link7={
-          <div>
-            <NavLink2
-              state="active2"
-              linkstate="active-link2"
-              icon="file"
-              linkname="Reports"
-              link="/"
-            />
-            <ul className="Sublink-Ul">
-              <SubNavLink
-                state="active2"
-                linkstate="active-link2"
-                linkname="Unbilled"
-                link="/"
-              />
-              <SubNavLink
-                state=""
-                linkstate=""
-                linkname="Billed"
-                link="/"
-              />
-            </ul>
-          </div>
-        }
-        link8={
-          <NavLink2
-            state=""
-            linkstate=""
-            icon="tag"
-            linkname="Tagging"
-            link="404"
-          />
-        }
-        link9={
-          <NavLink2
-            state=""
-            linkstate=""
-            icon="user-admin"
-            linkname="Admin"
-            link="404"
-          />
-        }
-        link10={
-          <NavLink2
-            state=""
-            linkstate=""
-            icon="download"
-            linkname="Downloads"
-            link="404"
-          />
-        }
-        link11={
-          <NavLink2
-            state=""
-            linkstate=""
-            icon="time"
-            linkname="Real Time"
-            link="404"
-          />
-        }
-      />
+      <Navbar />
       <main>{children}</main>
       <Footer />
     </div>

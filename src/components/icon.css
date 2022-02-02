@@ -48,6 +48,12 @@
 .sk-icon-help-circle:before {
   content: "\e95d";
 }
+.sk-icon-phone-book:before {
+  content: "\e975";
+}
+.sk-icon-mobile:before {
+  content: "\e96d";
+}
 .sk-icon-target:before {
   content: "\e991";
 }

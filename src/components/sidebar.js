@@ -3,7 +3,6 @@ import React from "react"
 const Sidebar = props => (
   <nav className="Sidebar">
     <ul className="Siderbar-Ul">
-      <div className="Sidebar-Links">
         {props.link1}
         {props.link2}
         {props.link3}
@@ -14,7 +13,7 @@ const Sidebar = props => (
         {props.link8}
         {props.link9}
         {props.link10}
-      </div>
+        {props.link11}
     </ul>
   </nav>
 )
