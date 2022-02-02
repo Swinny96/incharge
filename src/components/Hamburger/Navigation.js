@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import NavLink from "../navlink"
-import SubNavLink from "../sublink"
+import NavLink from "./navlink"
+import SubNavLink from "./sublink"
 
 const Ul = styled.ul`
   margin: 0px;

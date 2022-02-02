@@ -15,8 +15,8 @@ import "./icon.css"
 import "./font.css"
 import Footer from "./footer"
 import Sidebar from "./sidebar"
-import NavLink from "./navlink"
-import SubNavLink from "./sublink"
+import NavLink from "./Hamburger/navlink"
+import SubNavLink from "./Hamburger/sublink"
 import Navbar from "./Hamburger/Nav"
 
 const Layout = ({ children }) => {
