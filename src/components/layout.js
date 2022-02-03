@@ -14,7 +14,7 @@ import "./layout.css"
 import "./icon.css"
 import "./font.css"
 import Footer from "./footer"
-import Sidebar from "./Hamburger/Sidebar"
+import Sidebar from "./Nav/Navbar"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
